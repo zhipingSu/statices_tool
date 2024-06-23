@@ -1,5 +1,5 @@
-table <- function(x1,decreasing=T){
-  x=base::table(x1)
+table <- function(x,decreasing=T){
+  x=base::table(x)
   x=as.data.frame(x)
   x[,3]=x$Freq/sum(x$Freq)*100
   rownames(x)=x[,1]
@@ -11,3 +11,4 @@ table <- function(x1,decreasing=T){
   return(x)
 }
  
+
